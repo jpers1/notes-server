@@ -463,6 +463,32 @@ h3 {
   border-bottom: 1px solid gray;
 }
 
+@media ( max-width: 680px ) {
+  .main-header {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+
+    .header-title {
+      justify-self: stretch;
+      min-width: 0;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .page-title,
+    .page-title a {
+      display: block;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .header-user-label {
+      display: none;
+    }
+  }
+}
+
 .chapter {
   h2.chapter-title {
     color: rgb(52 211 153);
