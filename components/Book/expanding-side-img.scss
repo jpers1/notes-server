@@ -217,20 +217,27 @@ div.expanding-side-img-container {
       display: none !important;
     }
 
-    .expanding-side-img {
-        img {
-          width: 100%
+    div.expanding-side-img {
+      position: static;
+      width: 100%;
+      max-width: 100%;
+      transform: none;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      &:has(.caption) {
+        text-align: center;
+
+        &::after {
+          display: none;
         }
-        &:has(.caption) {
-          text-align: center;
 
-          &::after {
-            display: none;
-          }
-
-          img {
-            margin-bottom: 0;
-          }
+        img {
+          margin-bottom: 0;
+        }
 
         .caption, .children {
           font-weight: 400 !important;
