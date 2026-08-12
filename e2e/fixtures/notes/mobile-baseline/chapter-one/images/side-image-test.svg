@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180">
+  <rect width="320" height="180" fill="#f79211"/>
+  <rect x="8" y="8" width="304" height="164" fill="#ffffff" stroke="#202020" stroke-width="4"/>
+  <text x="160" y="94" fill="#202020" font-family="sans-serif" font-size="24" text-anchor="middle">
+    SIDE IMAGE TEST
+  </text>
+</svg>
