@@ -36,4 +36,6 @@ Configured projects:
 
 Artifacts are written under `test-results/e2e/`; the HTML report is written under `playwright-report/`. The mobile test attaches JSON layout measurements and a full-page screenshot for diagnostic evidence.
 
+The horizontal-overflow regression cases use synthetic collection CSS and synthetic Markdown only. They model a narrowed mobile content area with either a block-code widget or unbreakable inline code. Their desired-behavior assertions require the document to remain viewport-width; the block-code case separately requires its code widget to own any necessary horizontal scrolling. Until the production overflow behavior is fixed, these new mobile assertions are expected regression failures rather than encoded expectations of broken behavior.
+
 The mobile project is Playwright WebKit plus iPhone device emulation. It is useful for repeatable browser testing, but it is not certification from a physical iPhone running iOS Safari.
