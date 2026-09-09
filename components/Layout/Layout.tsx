@@ -97,7 +97,7 @@ export default function Layout({
   return (
     <div className="flex flex-col min-h-screen mt-14">
       <header className="main-header">
-        <div className="flex justify-between items-center min-w-0 gap-3">
+        <div className="header-left flex justify-between items-center min-w-0 gap-3">
           <div className="flex flex-row gap-5">
             {home && <Icon icon={HomeRoofIcon} link={home}/> }
             { chapters.length > 1 &&
@@ -140,14 +140,14 @@ export default function Layout({
             </div>
           )}
         </div>
-        <div className="justify-self-center">
+        <div className="header-title justify-self-center">
           { collection ? "/" :
            <span className="page-title">
              {titleLink}
            </span>
           }
         </div>
-        <div className={`flex ${collection && title ? "justify-between items-center min-w-0 gap-3" : "justify-end"}`}>
+        <div className={`header-right flex ${collection && title ? "justify-between items-center min-w-0 gap-3" : "justify-end"}`}>
           {collection && titleLink &&
             <div className="min-w-0 flex flex-1 truncate text-left flex-nowrap items-center">
               <span className="inline-block min-w-0">{titleLink}</span>
@@ -156,12 +156,12 @@ export default function Layout({
               }
             </div>
           }
-          <div className="flex flex-row gap-5">
-            <div title={user?.email || undefined}>
+          <div className="header-user-controls flex flex-row gap-5">
+            <div className="header-user-label" title={user?.email || undefined}>
               { user?.name ? `${user?.name} ${user?.surname}` : user?.email || t("user.anonymous-user") }
               { !!userGroup && `, ${userGroup}`}
             </div>
-            <div className="flex">
+            <div className="header-user-control flex">
               <UserDropdown
                 showLinkToResults={showLinkToResults}
                 returnLink={returnLink}
